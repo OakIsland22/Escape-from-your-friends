@@ -733,7 +733,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -753,11 +759,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: b19306a6-3ac8-474e-b5dd-6577e1caae93
+  cloudProjectId: 859f4572-8d93-4642-8f1c-941bbb9d26b7
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Escape-from-your-friends
-  organizationId: georgesl1120
+  organizationId: matmaucio09
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

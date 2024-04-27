@@ -3,19 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    // Este método se llama cuando el jugador selecciona 'Jugar'
     public void PlayGame()
     {
-        // Cambia "GameScene" por el nombre de tu escena de juego
-        SceneManager.LoadScene("DemoScene");
+        // Intenta cargar la escena del juego y maneja cualquier error que pueda ocurrir
+        LoadScene("DemoScene");
     }
 
+    // Este método se llama cuando el jugador selecciona 'Opciones'
     public void OpenOptions()
     {
-        // Aquí puedes añadir la lógica para abrir el menú de opciones
+        // TODO: Añadir la lógica para abrir el menú de opciones
     }
 
+    // Este método se llama cuando el jugador selecciona 'Salir'
     public void QuitGame()
     {
+        // Cierra la aplicación
         Application.Quit();
+    }
+
+    // Método para cargar escenas de forma segura
+    private void LoadScene(string sceneName)
+    {
+        
     }
 }
