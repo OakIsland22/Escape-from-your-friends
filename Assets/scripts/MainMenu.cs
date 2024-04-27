@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     // Este método se llama cuando el jugador selecciona 'Opciones'
     public void OpenOptions()
     {
-        // TODO: Añadir la lógica para abrir el menú de opciones
+        SceneManager.LoadScene("MenuOpciones");
     }
 
     // Este método se llama cuando el jugador selecciona 'Salir'
