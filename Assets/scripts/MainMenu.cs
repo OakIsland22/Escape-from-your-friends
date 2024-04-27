@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Intenta cargar la escena del juego y maneja cualquier error que pueda ocurrir
-        LoadScene("DemoScene");
+       SceneManager.LoadScene("Demo_scene");
     }
 
     // Este método se llama cuando el jugador selecciona 'Opciones'
@@ -24,8 +24,5 @@ public class MainMenu : MonoBehaviour
     }
 
     // Método para cargar escenas de forma segura
-    private void LoadScene(string sceneName)
-    {
-        
-    }
+   
 }
