@@ -13,7 +13,7 @@ public class Player_2_Movement : MonoBehaviour
     private void Update()
     {
         // Rotación horizontal
-        float rotation = Input.GetAxis("Horizontal_P2") * rotationSpeed * Time.deltaTime;
+        float rotation = Input.GetAxis("Horizontal_P2") * rotationSpeed * Time.deltaTime;   
         transform.Rotate(0, rotation, 0);
 
         // Movimiento adelante y atrás
