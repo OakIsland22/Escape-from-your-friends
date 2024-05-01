@@ -22,13 +22,22 @@ public class Player_2Junp : MonoBehaviour
             velocity.y = -2f; // Asegura que esté pegado al suelo
         }
 
-        if (Input.GetButtonDown("Jump_P2") && isGrounded)
-        {
-            Debug.Log("Salto2");
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        //if (Input.GetButtonDown("Jump_P2") && isGrounded)
+        //{
+        //    Debug.Log(Input.GetJoystickNames());
+        //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        //}
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+    public void Salto_P2()
+    {
+        if (isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Debug.Log("salto desde input 2");
+        }
+
     }
 }

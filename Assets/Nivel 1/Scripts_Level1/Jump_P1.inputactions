@@ -1,0 +1,90 @@
+{
+    "name": "Jump_P1",
+    "maps": [
+        {
+            "name": "Jump_1",
+            "id": "aca55db7-2929-4ee9-9d2b-ea1936ae98e6",
+            "actions": [
+                {
+                    "name": "Salto",
+                    "type": "Button",
+                    "id": "cb93e774-6c77-44bb-9aef-febb7726dba5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7ba0fec1-512b-4812-998c-ad45b43d5da3",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Jump_2",
+            "id": "52f37f43-4b45-4ebb-86ec-72dfca22d8ae",
+            "actions": [
+                {
+                    "name": "Salto",
+                    "type": "Button",
+                    "id": "92cdb626-459a-4f8e-94cc-fbe908def296",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "74be56e9-3fcf-4dfc-8781-9791a4c1404c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Jump_3",
+            "id": "5ef72ef7-d5f8-4a40-a1e8-705cd0296097",
+            "actions": [
+                {
+                    "name": "Salto",
+                    "type": "Button",
+                    "id": "9b9f825b-7563-40db-ae55-51af3641a729",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bb5a132b-b6c8-47df-838a-f98ca7ed8745",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
