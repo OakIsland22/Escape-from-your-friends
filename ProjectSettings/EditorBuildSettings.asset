@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenas/MenuOpciones.unity
     guid: e67919e6478f2024c8d2b7e6120a2373
+  - enabled: 1
+    path: Assets/escenas/Controles.unity
+    guid: c0c2cc1a97b82cc49bc56f959f1cb96b
   m_configObjects: {}

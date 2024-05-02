@@ -3,26 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Este método se llama cuando el jugador selecciona 'Jugar'
+    // Este mï¿½todo se llama cuando el jugador selecciona 'Jugar'
     public void PlayGame()
     {
         // Intenta cargar la escena del juego y maneja cualquier error que pueda ocurrir
-       SceneManager.LoadScene("Demo_scene");
+        SceneManager.LoadScene("Seleccion");
     }
 
-    // Este método se llama cuando el jugador selecciona 'Opciones'
+    // Este mï¿½todo se llama cuando el jugador selecciona 'Opciones'
     public void OpenOptions()
     {
         SceneManager.LoadScene("MenuOpciones");
     }
-
-    // Este método se llama cuando el jugador selecciona 'Salir'
+    // Este mï¿½todo se llama cuando el jugador selecciona 'MainMenu'
+    public void MenuInicial()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+        // Este mï¿½todo se llama cuando el jugador selecciona 'Controles'
+    public void Controles()
+    {
+        SceneManager.LoadScene("Controles");
+    }
+    // Este mï¿½todo se llama cuando el jugador selecciona 'Salir'
     public void QuitGame()
     {
-        // Cierra la aplicación
+        // Cierra la aplicaciï¿½n
         Application.Quit();
     }
 
-    // Método para cargar escenas de forma segura
+    // Mï¿½todo para cargar escenas de forma segura
    
 }
