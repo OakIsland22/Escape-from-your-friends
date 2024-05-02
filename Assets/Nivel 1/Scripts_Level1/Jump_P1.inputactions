@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Cortar Bomba",
+                    "type": "Button",
+                    "id": "53b393b5-538c-4a99-b916-9c7d984ebee7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -24,6 +33,17 @@
                     "processors": "",
                     "groups": "Player1",
                     "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f676320-009e-4040-a171-a22d6825e738",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "Cortar Bomba",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -41,6 +61,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CortarBomba",
+                    "type": "Button",
+                    "id": "c3d0c36f-0a9e-44d0-baef-cc5ca490e696",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -52,6 +81,17 @@
                     "processors": "",
                     "groups": "Player2",
                     "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a296a46-5df5-4828-bf15-8e05f2c5757d",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player2",
+                    "action": "CortarBomba",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -69,6 +109,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CortarBoMBA",
+                    "type": "Button",
+                    "id": "32531a77-96a5-4484-bd3a-55c3141505e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -80,6 +129,17 @@
                     "processors": "",
                     "groups": "Player3",
                     "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "840bf713-746e-4790-881a-e17a8d1adc02",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player3",
+                    "action": "CortarBoMBA",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
