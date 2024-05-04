@@ -50,11 +50,18 @@ public class Player1Movement : MonoBehaviour
     // Método para "morir"
     void Die()
     {
-        
-        
-        // Muestra la pantalla de "Has muerto"
         deathScreen.SetActive(true);
-        // Aquí puedes añadir más lógica, como reiniciar el nivel o mostrar un menú de "Game Over"
-        Debug.Log("me mori ");
+        // Aquí puedes añadir lógica para desactivar el control del jugador si es necesario
+    }
+
+    // Método para detectar colisión con dardos
+    private void OnTriggerEnter(Collider other)
+    {
+        // Asegúrate de que el objeto con el que colisiona tenga una etiqueta "Dart"
+        if (other.CompareTag("Dart"))
+        {
+            // Aquí puedes ajustar la cantidad de daño
+            TakeDamage(50);
+        }
     }
 }
