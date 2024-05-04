@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+// Dardos.cs
 using UnityEngine;
 
 public class Dardos : MonoBehaviour
@@ -10,11 +9,11 @@ public class Dardos : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            //if (playerHealth != null)
-            //{
-                //playerHealth.TakeDamage(damage);
-            //}
+            Player1Movement playerHealth = other.GetComponent<Player1Movement>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage((int)damage);
+            }
             Destroy(gameObject); // Destruye el dardo después de golpear
         }
     }
