@@ -2,33 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshCollider))]
-[RequireComponent(typeof(Rigidbody))]
+
 public class ArenaMovedisa : MonoBehaviour
 {
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        MeshCollider collider = gameObject.GetComponent<MeshCollider>();
-        collider.convex = true;
-        collider.isTrigger = true;
-
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        rb.useGravity = false;
-        rb.isKinematic = true;
-
-        // realentiza al jugador al entrar en contacto con la arena movediza y cambia su posición en el eje y a -5
-
-        void OnTriggerEnter(Collider other)
+        if (other.CompareTag("Player_2")) // Asegúrate de que tu personaje tenga la etiqueta "Player"
         {
-            if (other.CompareTag("Player"))
-            {
-                Player_2_Movement player = other.GetComponent<Player_2_Movement>();
-                player.speedPlayer = 1;
-                player.transform.position = new Vector3(player.transform.position.x, -5, player.transform.position.z);
-            }
+            StartCoroutine(Sink(other.transform));
+        }
+    }
+
+    private IEnumerator Sink(Transform player)
+    {
+        float sinkTime = 0.1f; // Tiempo que tarda en hundirse completamente
+        float sinkRate = player.position.y / sinkTime; // Tasa de hundimiento por segundo
+
+        while (sinkTime > 0)
+        {
+            player.position -= new Vector3(0, sinkRate * Time.deltaTime, 0); // Mueve al jugador hacia abajo
+            sinkTime -= Time.deltaTime;
+            yield return null;
         }
 
-
-
+        // Aquí puedes agregar lo que sucede una vez que el jugador está completamente hundido
     }
 }
