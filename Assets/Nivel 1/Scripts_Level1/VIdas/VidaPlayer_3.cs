@@ -18,7 +18,7 @@ public class VidaPlayer_3 : MonoBehaviour
     {
         Dead();
     }
-    public void Dano(int Dano)
+    public void TomarDano(int Dano)
     {
         vida -= Dano;
     }

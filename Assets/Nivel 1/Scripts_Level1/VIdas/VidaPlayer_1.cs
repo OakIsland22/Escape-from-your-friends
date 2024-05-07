@@ -20,7 +20,7 @@ public class VidaPlayer_1 : MonoBehaviour
     {
         Dead();
     }
-    public void Dano(int Dano)
+    public void TomarDano(int Dano)
     {
         vida -= Dano;   
     }
