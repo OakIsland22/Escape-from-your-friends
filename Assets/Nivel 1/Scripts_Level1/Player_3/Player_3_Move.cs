@@ -10,20 +10,25 @@ public class Player_3_Move : MonoBehaviour
 
     public Animator animator;
 
+
+    public VidaPlayer_3 Vida_P3;
     private void Update()
     {
-        // Rotación horizontal
-        float rotation = Input.GetAxis("Horizontal_P3") * rotationSpeed * Time.deltaTime;
-        transform.Rotate(0, rotation, 0);
+        if(Vida_P3.Moriste == false)
+        {
+            // Rotación horizontal
+            float rotation = Input.GetAxis("Horizontal_P3") * rotationSpeed * Time.deltaTime;
+            transform.Rotate(0, rotation, 0);
 
-        // Movimiento adelante y atrás
-        float moveVertical = Input.GetAxis("Vertical_P3");
-        Vector3 move = transform.forward * moveVertical;
+            // Movimiento adelante y atrás
+            float moveVertical = Input.GetAxis("Vertical_P3");
+            Vector3 move = transform.forward * moveVertical;
 
 
-        // Aplicar movimiento y gravedad
-        move.y += Physics.gravity.y * Time.deltaTime;
-        player.Move(move * speedPlayer * Time.deltaTime);
+            // Aplicar movimiento y gravedad
+            move.y += Physics.gravity.y * Time.deltaTime;
+            player.Move(move * speedPlayer * Time.deltaTime);
+        }        
     }
     private void FixedUpdate()
     {
