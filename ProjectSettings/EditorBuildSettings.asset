@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenas/Controles.unity
     guid: c0c2cc1a97b82cc49bc56f959f1cb96b
+  - enabled: 1
+    path: Assets/escenas/Seleccion.unity
+    guid: 01499d820e247634a83fc793976e2d8d
+  - enabled: 1
+    path: Assets/Nivel 1/Escena_Nivel_1.unity
+    guid: 182b16c429607354abefbcc9801f8f55
   m_configObjects: {}
