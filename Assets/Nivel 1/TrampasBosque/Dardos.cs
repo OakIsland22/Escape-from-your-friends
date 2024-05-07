@@ -3,25 +3,26 @@ using UnityEngine;
 
 public class Dardos : MonoBehaviour
 {
-    public float damage = 10f; // Daño que el dardo aplicará al jugador
+    public int danoRecibir = 5;
 
-    // Este método se llama cuando el dardo colisiona con otro objeto
-    void OnTriggerEnter(Collider other)
+    public VidaPlayer_1 VidaP1;
+    public VidaPlayer_3 VidaP_3;
+
+    private void Start()
     {
-        // Verifica si el objeto con el que colisionó tiene la etiqueta "Player"
-        if (other.CompareTag("Player"))
+        VidaP1 = GameObject.FindGameObjectWithTag("Player_2").GetComponent<VidaPlayer_1>();
+        VidaP_3 = GameObject.FindGameObjectWithTag("Player_3").GetComponent<VidaPlayer_3>();
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player_3"))
         {
-            // Obtiene el componente Player1Movement del objeto con el que colisionó
-            Player1Movement playerHealth = other.GetComponent<Player1Movement>();
-
-            // Si encuentra el componente, aplica daño
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage((int)damage);
-            }
-
-            // Destruye el dardo después de golpear al jugador para que no pueda causar más daño
-            Destroy(gameObject);
+            VidaP_3.TomarDano(danoRecibir);
+        }
+        if (other.gameObject.CompareTag("Player_2"))
+        {
+            VidaP1.TomarDano(danoRecibir);
         }
     }
 }
