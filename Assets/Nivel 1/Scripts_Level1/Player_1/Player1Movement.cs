@@ -26,9 +26,10 @@ public class Player1Movement : MonoBehaviour
         // Aplicar movimiento y gravedad
         move.y += Physics.gravity.y * Time.deltaTime;
         player.Move((move + strafe) * speedPlayer * Time.deltaTime);
-        // Aplicar movimiento y gravedad
-        move.y += Physics.gravity.y * Time.deltaTime;
-        player.Move(move * speedPlayer * Time.deltaTime);
+
+        //// Aplicar movimiento y gravedad
+        //move.y += Physics.gravity.y * Time.deltaTime;
+        //player.Move(move * speedPlayer * Time.deltaTime);
 
     }
 }
