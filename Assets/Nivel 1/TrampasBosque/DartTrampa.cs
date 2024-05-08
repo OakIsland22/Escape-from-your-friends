@@ -9,14 +9,18 @@ public class DartTrampa : MonoBehaviour
     public float dartLifetime = 5f; // Tiempo de vida del dardo en segundos
     private float shootTimer;
 
+    public Activar_trampa activar_Trampa;
     void Update()
     {
-        shootTimer += Time.deltaTime;
-        if (shootTimer >= shootInterval)
+        if(activar_Trampa.activarTrampa == true)
         {
-            ShootDart();
-            shootTimer = 0f;
-        }
+            shootTimer += Time.deltaTime;
+            if (shootTimer >= shootInterval)
+            {
+                ShootDart();
+                shootTimer = 0f;
+            }
+        }        
     }
 
     void ShootDart()

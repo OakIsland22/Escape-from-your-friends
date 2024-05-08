@@ -5,26 +5,82 @@ using UnityEngine;
 
 public class ArenaMovedisa : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public int danoTrampa = 1;
+    public float intervaloDano = 1.0f; 
+
+    public VidaPlayer_1 vidaP2;
+    public VidaPlayer_3 vidaP3;
+
+    public Player_2_Movement movement2;
+    public Player_3_Move movement3;
+
+    public float detenerPlayer = 1f;
+
+    private float moveInicial_1;
+    private float moveInicial_2;
+    private float timerP2;
+    private float timerP3;
+    private bool isPlayer2Inside;
+    private bool isPlayer3Inside;
+
+    private void Start()
     {
-        if (other.CompareTag("Player_2")) // Asegúrate de que tu personaje tenga la etiqueta "Player"
+        moveInicial_1 = movement2.speedPlayer;
+        moveInicial_2 = movement3.speedPlayer;
+        timerP2 = 0f;
+        timerP3 = 0f;
+    }
+
+    private void Update()
+    {
+        if (isPlayer2Inside)
         {
-            StartCoroutine(Sink(other.transform));
+            timerP2 += Time.deltaTime;
+            if (timerP2 >= intervaloDano)
+            {
+                vidaP2.vida -= danoTrampa;
+                timerP2 = 0f;
+            }
+        }
+
+        if (isPlayer3Inside)
+        {
+            timerP3 += Time.deltaTime;
+            if (timerP3 >= intervaloDano)
+            {
+                vidaP3.vida -= danoTrampa;
+                timerP3 = 0f;
+            }
         }
     }
 
-    private IEnumerator Sink(Transform player)
+    private void OnTriggerEnter(Collider other)
     {
-        float sinkTime = 0.1f; // Tiempo que tarda en hundirse completamente
-        float sinkRate = player.position.y / sinkTime; // Tasa de hundimiento por segundo
-
-        while (sinkTime > 0)
+        if (other.CompareTag("Player_2"))
         {
-            player.position -= new Vector3(0, sinkRate * Time.deltaTime, 0); // Mueve al jugador hacia abajo
-            sinkTime -= Time.deltaTime;
-            yield return null;
+            movement2.speedPlayer -= detenerPlayer;
+            isPlayer2Inside = true;
         }
+        else if (other.CompareTag("Player_3"))
+        {
+            movement3.speedPlayer -= detenerPlayer;
+            isPlayer3Inside = true;
+        }
+    }
 
-        // Aquí puedes agregar lo que sucede una vez que el jugador está completamente hundido
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player_2"))
+        {
+            movement2.speedPlayer = moveInicial_1;
+            isPlayer2Inside = false;
+            timerP2 = 0f; // Reset timer
+        }
+        else if (other.CompareTag("Player_3"))
+        {
+            movement3.speedPlayer = moveInicial_2;
+            isPlayer3Inside = false;
+            timerP3 = 0f; // Reset timer
+        }
     }
 }
