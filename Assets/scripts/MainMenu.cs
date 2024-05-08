@@ -31,7 +31,8 @@ public class MainMenu : MonoBehaviour
         // Cierra la aplicaci�n
         Application.Quit();
     }
-
-    // M�todo para cargar escenas de forma segura
-   
+    public void Confirm()
+    {
+        SceneManager.LoadScene("MainMenu2");
+    }
 }
