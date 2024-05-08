@@ -23,6 +23,8 @@ public class ArenaMovedisa : MonoBehaviour
     private bool isPlayer2Inside;
     private bool isPlayer3Inside;
 
+
+    public Activar_trampa activar_trampa;
     private void Start()
     {
         moveInicial_1 = movement2.speedPlayer;
@@ -33,38 +35,41 @@ public class ArenaMovedisa : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayer2Inside)
+        if(activar_trampa.activarTrampa == true)
         {
-            timerP2 += Time.deltaTime;
-            if (timerP2 >= intervaloDano)
+            if (isPlayer2Inside)
             {
-                vidaP2.vida -= danoTrampa;
-                timerP2 = 0f;
+                timerP2 += Time.deltaTime;
+                if (timerP2 >= intervaloDano)
+                {
+                    vidaP2.vida -= danoTrampa;
+                    timerP2 = 0f;
+                }
             }
-        }
 
-        if (isPlayer3Inside)
-        {
-            timerP3 += Time.deltaTime;
-            if (timerP3 >= intervaloDano)
+            if (isPlayer3Inside)
             {
-                vidaP3.vida -= danoTrampa;
-                timerP3 = 0f;
+                timerP3 += Time.deltaTime;
+                if (timerP3 >= intervaloDano)
+                {
+                    vidaP3.vida -= danoTrampa;
+                    timerP3 = 0f;
+                }
             }
-        }
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {        
         if (other.CompareTag("Player_2"))
         {
-            movement2.speedPlayer -= detenerPlayer;
             isPlayer2Inside = true;
+            movement2.speedPlayer -= detenerPlayer;            
         }
         else if (other.CompareTag("Player_3"))
         {
-            movement3.speedPlayer -= detenerPlayer;
             isPlayer3Inside = true;
+            movement3.speedPlayer -= detenerPlayer;
         }
     }
 

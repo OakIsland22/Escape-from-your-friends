@@ -14,22 +14,20 @@ public class Activar_trampa : MonoBehaviour
 
     private void Update()
     {
-        // Verificar si el botón de activar la trampa es presionado mientras el jugador está dentro de la trampa
         if (EstaEnTrampa && Input.GetButtonDown("Activar_T"))
         {
             activarTrampa = true;
-            Timer = 0; // Reseteamos el temporizador al activar la trampa
+            Timer = 0; 
             TXTdardos.SetActive(false);
         }
 
-        // Si la trampa está activada, incrementar el temporizador
         if (activarTrampa)
         {
             Timer += Time.deltaTime;
             if (Timer >= TiempoDesactivar)
             {
-                activarTrampa = false; // Desactivar la trampa después de que el tiempo se agote
-                Timer = 0; // Reseteamos el temporizador después de desactivar la trampa
+                activarTrampa = false; 
+                Timer = 0; 
                 TXTdardos.SetActive(true);
             }
         }
