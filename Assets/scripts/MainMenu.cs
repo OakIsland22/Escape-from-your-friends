@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Intenta cargar la escena del juego y maneja cualquier error que pueda ocurrir
-        SceneManager.LoadScene("Seleccion");
+        SceneManager.LoadScene("Escena_Nivel_1");
     }
 
     // Este m�todo se llama cuando el jugador selecciona 'Opciones'
@@ -31,7 +31,8 @@ public class MainMenu : MonoBehaviour
         // Cierra la aplicaci�n
         Application.Quit();
     }
-
-    // M�todo para cargar escenas de forma segura
-   
+    public void Confirm()
+    {
+        SceneManager.LoadScene("MainMenu2");
+    }
 }
