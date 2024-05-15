@@ -15,9 +15,11 @@ public class SueloFalso : MonoBehaviour
 
     // Referencia al objeto que caerá y aplastará al jugador
     public GameObject objetoAplastador;
-
+    public GameObject objetoAplastador2;
     // Daño que se aplicará al jugador al activar la trampa
     public int dano = 10;
+    public VidaPlayer_1 player_2;
+    public VidaPlayer_3 player_3 ;
 
     void Start()
     {
@@ -47,12 +49,17 @@ public class SueloFalso : MonoBehaviour
         Instantiate(objetoAplastador, transform.position, Quaternion.identity);
 
         // Aplicar daño al jugador
-        VidaPlayer_3 player_3 = FindObjectOfType<VidaPlayer_3>();
+       
         if (player_3 != null)
         {
             player_3.TomarDano(dano);
         }
 
+       
+        if (player_2 != null)
+        {
+            player_2.TomarDano(dano);
+        }
         // Aquí puedes añadir más lógica, como reproducir un sonido o animación
     }
 
