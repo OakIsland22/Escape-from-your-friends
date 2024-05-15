@@ -13,6 +13,12 @@ public class SueloFalso : MonoBehaviour
     // Referencia al componente Renderer del suelo para hacerlo desaparecer
     private Renderer rendererDelSuelo;
 
+    // Referencia al objeto que caerá y aplastará al jugador
+    public GameObject objetoAplastador;
+
+    // Daño que se aplicará al jugador al activar la trampa
+    public int dano = 10;
+
     void Start()
     {
         // Inicializar las referencias
@@ -36,6 +42,16 @@ public class SueloFalso : MonoBehaviour
 
         // Hacer desaparecer el suelo visualmente
         rendererDelSuelo.enabled = false;
+
+        // Instanciar el objeto aplastador y hacerlo caer
+        Instantiate(objetoAplastador, transform.position, Quaternion.identity);
+
+        // Aplicar daño al jugador
+        VidaPlayer_3 player_3 = FindObjectOfType<VidaPlayer_3>();
+        if (player_3 != null)
+        {
+            player_3.TomarDano(dano);
+        }
 
         // Aquí puedes añadir más lógica, como reproducir un sonido o animación
     }
