@@ -4,29 +4,21 @@ using UnityEngine;
 
 public class MoveCamara : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float rotationSpeed = 50f;
-    public float minYRotation = -50f;
-    public float maxYRotation = 50f;
-    public float minXRotation = -30f;
-    public float maxXRotation = 30f;
+    public float speed = 5;
+    public float minAngle = -30f;  // Mínimo ángulo de rotación en grados
+    public float maxAngle = 30f;   // Máximo ángulo de rotación en grados
 
-    void Update()
+    private void Update()
     {
-        //// Movimiento
-        //float moveHorizontal = Input.GetAxis("Horizontal");
-        //float moveVertical = Input.GetAxis("Vertical");
-        //Vector3 moveDirection = new Vector3(moveHorizontal, moveVertical, 0f).normalized;
-        //transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        float angle = transform.localEulerAngles.x;  // Obtener el ángulo actual
+        angle = (angle > 180) ? angle - 360 : angle; // Convertir ángulos mayores de 180 a negativos
 
-        // Rotación en X
-        float rotateX = -Input.GetAxis("Vertical_Player1") * rotationSpeed * Time.deltaTime;
-        float newRotationX = Mathf.Clamp(transform.eulerAngles.x + rotateX, minYRotation, maxYRotation);
+        // Cambiar el signo para invertir el control
+        float rotationAmount = -Time.deltaTime * Input.GetAxis("Vertical_Cam_1") * speed; // Cantidad de rotación invertida
 
-        // Rotación en Y
-        float rotateY = Input.GetAxis("Horizontal_Player1") * rotationSpeed * Time.deltaTime;
-        float newRotationY = Mathf.Clamp(transform.eulerAngles.y + rotateY, minXRotation, maxXRotation);
+        float newAngle = Mathf.Clamp(angle + rotationAmount, minAngle, maxAngle);  // Calcular nuevo ángulo limitado
 
-        transform.rotation = Quaternion.Euler(newRotationX, newRotationY, 0f);
+        // Asignar el nuevo ángulo a la rotación en el eje X, manteniendo los otros ángulos
+        transform.localEulerAngles = new Vector3(newAngle, transform.localEulerAngles.y, transform.localEulerAngles.z);
     }
 }
