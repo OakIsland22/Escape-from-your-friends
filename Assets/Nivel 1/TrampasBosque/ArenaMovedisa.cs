@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ArenaMovedisa : MonoBehaviour
 {
-    public int danoTrampa = 1;
+    public float danoTrampa = 1;
     public float intervaloDano = 1.0f; 
 
     public VidaPlayer_1 vidaP2;
