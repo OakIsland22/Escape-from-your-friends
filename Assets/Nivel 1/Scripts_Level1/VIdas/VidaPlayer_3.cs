@@ -6,7 +6,7 @@ using UnityEngine;
 public class VidaPlayer_3 : MonoBehaviour
 {
     public float vida = 100;
-    public int vidaMaxima = 100;
+    public float vidaMaxima = 100;
     public TextMeshProUGUI txtVida;
 
     public GameObject Perdiste_P2;
@@ -26,7 +26,7 @@ public class VidaPlayer_3 : MonoBehaviour
             vida = 0;
         }
     }
-    public void TomarDano(int dano)
+    public void TomarDano(float dano)
     {
         vida -= dano;
         Debug.Log("jugador3recibedaño");
