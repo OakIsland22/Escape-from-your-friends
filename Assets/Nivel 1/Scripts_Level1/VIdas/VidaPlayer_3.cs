@@ -7,7 +7,6 @@ public class VidaPlayer_3 : MonoBehaviour
 {
     public float vida = 100;
     public float vidaMaxima = 100;
-    public TextMeshProUGUI txtVida;
 
     public GameObject Perdiste_P2;
 
@@ -19,7 +18,6 @@ public class VidaPlayer_3 : MonoBehaviour
     private void Update()
     {
         Dead();
-        txtVida.text = "Vida: " + vida.ToString();
 
         if(vida <= 0)
         {
@@ -28,8 +26,7 @@ public class VidaPlayer_3 : MonoBehaviour
     }
     public void TomarDano(float dano)
     {
-        vida -= dano;
-        Debug.Log("jugador3recibedaño");
+        vida -= dano;       
     }
 
     public void Dead()

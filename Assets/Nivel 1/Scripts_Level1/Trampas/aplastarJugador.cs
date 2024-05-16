@@ -13,17 +13,17 @@ public class aplastarJugador : MonoBehaviour
     public bool estaEnTrampaP2 = false;
     public bool estaEnTrampaP3 = false;
 
-    public bool trampaActivada = false;
+    public Activar_trampa activar_Trampa;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player_2") && trampaActivada == true)
+        if (other.gameObject.CompareTag("Player_2") && activar_Trampa == true)
         {
             estaEnTrampaP2 = true;
             DanoPlayer2();
         }
 
-        if (other.gameObject.CompareTag("Player_3") && trampaActivada == true)
+        if (other.gameObject.CompareTag("Player_3") && activar_Trampa == true)
         {
             estaEnTrampaP3 = true;
             DanoPlayer3();

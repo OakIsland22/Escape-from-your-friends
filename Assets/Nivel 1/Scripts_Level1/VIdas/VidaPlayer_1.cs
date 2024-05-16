@@ -30,7 +30,6 @@ public class VidaPlayer_1 : MonoBehaviour
     public void TomarDano(float dano)
     {
         vida -= dano; 
-        Debug.Log("jugador2recibedaño");
     }
 
     public void Dead()
