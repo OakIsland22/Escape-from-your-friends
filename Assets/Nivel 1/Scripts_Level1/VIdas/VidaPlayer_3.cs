@@ -21,14 +21,15 @@ public class VidaPlayer_3 : MonoBehaviour
         Dead();
         txtVida.text = "Vida: " + vida.ToString();
 
-        if(vida < 0)
+        if(vida <= 0)
         {
             vida = 0;
         }
     }
-    public void TomarDano(int Dano)
+    public void TomarDano(int dano)
     {
-        vida -= Dano;
+        vida -= dano;
+        Debug.Log("jugador3recibedaño");
     }
 
     public void Dead()

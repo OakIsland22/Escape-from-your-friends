@@ -20,6 +20,7 @@ public class SueloFalso : MonoBehaviour
     public int dano = 10;
     public VidaPlayer_1 player_2;
     public VidaPlayer_3 player_3 ;
+    public Activar_trampa activar_Trampa;
 
     void Start()
     {
@@ -28,10 +29,10 @@ public class SueloFalso : MonoBehaviour
         rendererDelSuelo = GetComponent<Renderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Verificar si la trampa ha sido activada
-        if (trampaActivada)
+        if (activar_Trampa.activarTrampa == true)
         {
             ActivarTrampa();
         }
@@ -48,7 +49,8 @@ public class SueloFalso : MonoBehaviour
         // Instanciar el objeto aplastador y hacerlo caer
         Instantiate(objetoAplastador, transform.position, Quaternion.identity);
 
-        // Aplicar daño al jugador
+        // Aplicar daño al jugador solo si esta en la trampa
+
        
         if (player_3 != null)
         {

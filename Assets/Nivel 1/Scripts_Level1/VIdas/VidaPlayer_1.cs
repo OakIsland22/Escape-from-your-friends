@@ -72,9 +72,10 @@ public class VidaPlayer_1 : MonoBehaviour
             vida = 0;
         }
     }
-    public void TomarDano(float Dano)
+    public void TomarDano(float dano)
     {
-        vida -= Dano;   
+        vida -= dano; 
+        Debug.Log("jugador2recibedaño");
     }
 
     public void Dead()
