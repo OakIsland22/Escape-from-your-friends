@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
     {
         AnimacionesP1();
         AnimacionesP2();
+        AmbosPerdieron();
+       
     }
 
     private void AnimacionesP1()
@@ -75,4 +78,16 @@ public class GameManager : MonoBehaviour
             P3animator_vida_1.SetBool("perdioUna", true);
         }
     }
+
+    //agrega un metodo que compruebe si ambos jugadores han perdido y si ambos perdieron te lleva a otra escena
+
+    public void AmbosPerdieron()
+    {
+        if (vidaP1.vida <= 0 && vidaP2.vida <= 0)
+        {
+            SceneManager.LoadScene("EscenaVictoriaCazador");
+        }
+    }
+
+    
 }
