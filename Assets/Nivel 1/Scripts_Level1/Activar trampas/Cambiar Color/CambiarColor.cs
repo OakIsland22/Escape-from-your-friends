@@ -8,14 +8,14 @@ public class CambiarColor : MonoBehaviour
 
     public bool cambiarColor = false;
 
-    public Material[] colors; // Arreglo de materiales con los colores disponibles
-    private Renderer cubeRenderer; // Referencia al componente Renderer del cubo
-    private int currentColorIndex = 0; // Índice del color actual
+    public Material[] colors; 
+    private Renderer cubeRenderer; 
+    private int currentColorIndex = 0; 
 
     private void Start()
     {
-        cubeRenderer = GetComponent<Renderer>(); // Obtener el componente Renderer del cubo
-        cubeRenderer.material = colors[currentColorIndex]; // Establecer el color inicial del cubo
+        cubeRenderer = GetComponent<Renderer>();
+        cubeRenderer.material = colors[currentColorIndex]; 
     }
 
     private void Update()
