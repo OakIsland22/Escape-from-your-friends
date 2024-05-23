@@ -43,14 +43,14 @@ public class Win : MonoBehaviour
 
     private void AmbosPerdieron1()
     {
-        SceneManager.LoadScene("EscenaVictoriaPresas");
+        SceneManager.LoadScene("EscenaVictoriaPresas - copia");
     }
 
     private void AmbosPerdieron2()
     {
         if (Player_2_WIn && Player_3_WIn)
         {
-            SceneManager.LoadScene("EscenaVictoriaPresas");
+            SceneManager.LoadScene("EscenaVictoriaCazador");
         }
     }
 }

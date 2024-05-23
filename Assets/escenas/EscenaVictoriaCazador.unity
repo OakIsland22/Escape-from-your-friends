@@ -1808,14 +1808,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 0.99
+  m_PlayOnAwake: 0
+  m_Volume: 0.071
+  m_Pitch: 0.85
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 84
+  Priority: 120
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1883,7 +1883,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5914,7 +5914,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 544669872}
   victoryText: {fileID: 1200438438}
   audioSource: {fileID: 370670909}
-  victorySound: {fileID: 8300000, guid: f94974ba7f9d4ab4fa251ea4a0979925, type: 3}
+  victorySound: {fileID: 8300000, guid: 8d2d424b9e91bda44bc8d1f9d0fe2d4b, type: 3}
 --- !u!4 &1262937142
 Transform:
   m_ObjectHideFlags: 0

@@ -29,7 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenas/EscenaVictoriaCazador.unity
     guid: 57ba57d3d6ab7b045bd6ee6c3eb3a77e
-  - enabled: 1
+  - enabled: 0
     path: Assets/escenas/EscenaVictoriaPresas.unity
     guid: dc9e5b575de7427409f688b94c973797
+  - enabled: 1
+    path: Assets/escenas/EscenaVictoriaPresas - copia.unity
+    guid: 603feaf37a2eb8940b64e141fbd73f64
   m_configObjects: {}
