@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     // Este m�todo se llama cuando el jugador selecciona 'MainMenu'
     public void MenuInicial()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Prueba-de-menu");
     }
         // Este m�todo se llama cuando el jugador selecciona 'Controles'
     public void Controles()
