@@ -12,6 +12,12 @@ public class Activar_trampa : MonoBehaviour
     private float Timer = 0;
     public float TiempoDesactivar = 2;
 
+    public GameObject boton;
+
+    private void Start()
+    {
+        TXTdardos.SetActive(false);
+    }
     private void Update()
     {
         if (EstaEnTrampa && Input.GetButtonDown("Activar_T"))
@@ -19,6 +25,7 @@ public class Activar_trampa : MonoBehaviour
             activarTrampa = true;
             Timer = 0; 
             TXTdardos.SetActive(false);
+            boton.gameObject.SetActive(false);
         }
 
         if (activarTrampa)
@@ -28,9 +35,8 @@ public class Activar_trampa : MonoBehaviour
             {
                 activarTrampa = false; 
                 Timer = 0; 
-                TXTdardos.SetActive(true);
             }
-        }
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
