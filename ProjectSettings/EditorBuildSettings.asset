@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/escenas/MainMenu.unity
     guid: bbf084c63350a0048abfd26f28c7c16f
   - enabled: 0
     path: Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/DEMO/Demo_scene.unity
     guid: 2b90041c02fa0424794af2d500508091
+  - enabled: 1
+    path: Assets/MenuPrueba/Prueba-de-menu.unity
+    guid: 31a5f5cc0d20e464383d01a8f56c0bb9
   - enabled: 1
     path: Assets/escenas/MenuOpciones.unity
     guid: e67919e6478f2024c8d2b7e6120a2373
@@ -35,7 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenas/EscenaVictoriaPresas - copia.unity
     guid: 603feaf37a2eb8940b64e141fbd73f64
-  - enabled: 1
-    path: Assets/MenuPrueba/Prueba-de-menu.unity
-    guid: 31a5f5cc0d20e464383d01a8f56c0bb9
   m_configObjects: {}
